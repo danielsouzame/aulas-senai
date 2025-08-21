@@ -1,5 +1,6 @@
 programa {
   funcao inicio() {
+    //a
     real salario, salario_diario
     inteiro dias
       escreva("Qual seu salario mensal? ")
@@ -9,6 +10,7 @@ programa {
       salario_diario = salario / dias
       escreva("Seu salario diario é de: R$ ", salario_diario)
 
+    //b
     inteiro cafe, coxinha, halls, docedeleite
     real conta
     escreva("Quantos cafés você pediu? ")
@@ -19,9 +21,10 @@ programa {
     leia(halls)
     escreva("Quantos doces de leite você comprou? ")
     leia(docedeleite)
-    conta = 3 * (cafe * 3.5) + coxinha * 5 + halls * 2 + 2 * (docedeleite * 4)
+    conta = cafe * 5 + coxinha*5 + halls*2 + docedeleite*10
     escreva("O total da sua compra foi de: R$ ", conta)
 
+    //c
     real n1, n2, n3, n4, media
     escreva("Qual foi sua primeira nota? ")
     leia(n1)
@@ -34,7 +37,7 @@ programa {
     media = (n1 + n2 + n3 + n4)/4
     escreva("Sua média final foi de ", media)  
 
-
+    //d
     inteiro vitorias, derrotas, empates, pontos
     escreva("Quantos jogos você venceu? ")
     leia (vitorias)
@@ -45,15 +48,49 @@ programa {
     pontos = vitorias * 3 + empates
     escreva("A pontuação do seu time foi ", pontos)
 
+    //e
+    inteiro cafe, coxinha, halls, docedeleite
+    real conta
+    escreva("Quantos cafés você pediu? ")
+    leia(cafe)
+    escreva("Quantas coxinha você pediu? ")
+    leia(coxinha)
+    escreva("Quantos halls você comprou? ")
+    leia(halls)
+    escreva("Quantos doces de leite você comprou? ")
+    leia(docedeleite)
+    conta = 2 * (cafe * 5) + coxinha*5 + halls*2 + docedeleite*10
+    escreva("O total da sua compra foi de: R$ ", conta)
 
-    real dano, bonus
+    //f
+    real dano, critico
+    escreva("Quantos danos criticos seu personagem deu nessa batalha? ")
+    leia(dano)
+    critico = dano * 1.5
+    escreva("A quantidade de dano critico que seu personagem deu foi de ", critico)
+    
+    //g    
+    real dano, bonus,critico
     bonus = 10
     escreva("Quantos danos criticos seu personagem deu nessa batalha? ")
     leia(dano)
-    dano = dano * 1.5 + bonus
-    escreva("A quantidade de dano critico + o Bonus que seu personagem deu foi de ", dano)
+    critico = dano * 1.5 + bonus
+    escreva("A quantidade de dano critico + o Bonus que seu personagem deu foi de ", critico)
 
+    //h
+    real n1,p1,n2,p2,media
+    escreva("Qual sua nota 1?")
+    leia(n1) 
+    escreva("Qual sua nota 2?")
+    leia(p1) 
+    escreva("Qual sua nota 3?")
+    leia(n2) 
+    escreva("Qual sua nota 4?")
+    leia(p2)  
+    media = (n1*p1+n2*p2)/(p1+p2)
+    escreva("Sua média ponderada foi ",media)
 
+    //i
     real soma, poupanca, salario, moradia, agua, luz, internet, gasolina, netflix, telefone, outros
     escreva("Qual seu salario mensal? ")
     leia(salario)
@@ -75,6 +112,39 @@ programa {
     leia(outros)
     soma = moradia + agua + luz + internet + gasolina + netflix + telefone + outros
     poupanca = salario - soma
-    escreva("Você poupa R$ ", poupanca, " do seu salaro de R$ ", salario) 
+    escreva("Você poupa R$ ", poupanca, " do seu salario de R$ ", salario) 
+
+    //j
+    inteiro cafe, coxinha, halls, docedeleite
+    real conta
+    escreva("Quantos cafés você pediu? ")
+    leia(cafe)
+    escreva("Quantas coxinha você pediu? ")
+    leia(coxinha)
+    escreva("Quantos halls você comprou? ")
+    leia(halls)
+    escreva("Quantos doces de leite você comprou? ")
+    leia(docedeleite)
+    conta = 3* (cafe * 5) + coxinha*5 + halls*2 + 2*(docedeleite*10)
+    escreva("O total da sua compra foi de: R$ ", conta)
+
+    //k
+    real cafe, alunos, cafe_per_capita
+    escreve("Quantos alunos tem na sala hoje? ")
+    leia(alunos)
+    escreva("Quantos desses alunos estão com café? ")
+    leia(cafe)
+    cafe_per_capita = cafe/alunos
+    escreva("A quantidade de café per capita na sala hoje é: ",cafe_per_capita)
+    
+    //l
+    real cafe, alunos, cafe_per_capita,extra
+    escreve("Quantos alunos tem na sala hoje? ")
+    leia(alunos)
+    escreva("Quantos desses alunos estão com café? ")
+    leia(cafe)
+    escreva("Quantos destes alunos gostariam de um café extra? ")
+    cafe_per_capita = (cafe+extra)/alunos
+    escreva("A quantidade de café per capita na sala hoje é: ",cafe_per_capita)
   }
 }
