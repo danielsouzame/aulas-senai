@@ -1,0 +1,1 @@
+// Calculadora de IMC: Crie uma calculadora de Índice de Massa Corporal (IMC) que peça ao usuário seu peso e altura e, em seguida, calcule e exiba o IMC. Informe também em que faixa o usuário se encontra.
