@@ -7,3 +7,12 @@
 // De 18 a 65 anos: voto obrigatório;
 
 // Maiores de 65: voto facultativo.
+let idade = parseInt(prompt("Qual sua idade?"))
+
+if (idade >= 16 && idade < 18 || idade >= 65){
+    alert(`Você tem ${idade}, e seu voto é facultativo.`)
+}else if(idade < 16){
+    alert(`Você não pode votar.`)
+}else{
+    alert("Voto obrigatorio.")
+}

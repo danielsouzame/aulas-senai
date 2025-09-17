@@ -12,6 +12,14 @@
 let diarias = parseInt(prompt("Digite a quantidade de dias que você vai ficar la:"))
 let valor
 if (diarias<=5){
-    valor = (diarias*100) - (25/100) + 150
-    alert(valor)
+    valor = diarias * 100 * 0.75 + 150
+    alert(`Você vai ficar ${diarias} diarias, e cada diaria vai sair por R$ 100,00 e você ainda vai ganhar 10% off por ter pego a atendente e mais 15% por ser uber. entretanto vamos te cobrar mais R$ 150,00 pelo dia que você quebrou as coisas do quarto. O total de sua conta fica em R$ ${valor}`)
+}else if (diarias<=10){
+    valor = diarias * 90 * 0.75 + 150
+    alert(`Você vai ficar ${diarias} diarias, e cada diaria vai sair por R$ 90,00 e você ainda vai ganhar 10% off por ter pego a atendente e mais 15% por ser uber. entretanto vamos te cobrar mais R$ 150,00 pelo dia que você quebrou as coisas do quarto. O total de sua conta fica em R$ ${valor}`)
+}else if (diarias > 10){
+    valor = diarias * 80 * 0.75 + 150
+    alert(`Você vai ficar ${diarias} diarias, e cada diaria vai sair por R$ 80,00 e você ainda vai ganhar 10% off por ter pego a atendente e mais 15% por ser uber. entretanto vamos te cobrar mais R$ 150,00 pelo dia que você quebrou as coisas do quarto. O total de sua conta fica em R$ ${valor}`)
+}else {
+    alert(`A quantidade ${diarias} é invalida, tente novamente.`)
 }
