@@ -24,5 +24,5 @@ function executarExercicio(){
      // let nome = prompt("Qual o nome? ")
     // alert("Olá " + nome)
     let nome = document.getElementById("entrada").value
-    document.getElementById("resultado").innerHTML = "Olá" + nome
+    document.getElementById("resultado").innerHTML = "Olá " + nome
 }
