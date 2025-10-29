@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #EEE;
+}
+header{
+    background-color: #bbb;
+    /* padding-left: 20px;
+    margin-bottom: 20px; */
+    padding: 20px 25px;
+    margin: 10px 0 0 0; /* marigin-top: 10px---Top, Rigth, Bottom, Left*/
+}
+
+a{
+    color: #FFF;
+}
+
+.container{
+    display: flex;
+}
+
+nav{
+    background-color: #AAA;
+
+    ul{
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        padding: 15px 0;
+        
+        li {
+
+            a{
+                color: rgb(48, 255, 1);
+                text-decoration: none;
+                background: #FFF;
+                padding: 5px;
+                transition: all ease-in-out 0.3s;
+
+                &:hover{
+                    color: #FFF;
+                    background: rgb(48, 255, 1);
+                }
+            }
+        }
+    }
+}
+
+/* nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+} */
+
+main{
+    background-color: #CCC;
+    
+    section {
+        padding: 20px;
+        &#esportes{
+            background: #666;
+        }
+    }
+}
+
+footer{
+    background-color: #666;
+}
