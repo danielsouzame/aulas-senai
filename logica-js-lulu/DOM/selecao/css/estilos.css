@@ -61,8 +61,38 @@ main{
     
     section {
         padding: 20px;
-        &#esportes{
+
+        h2,p {
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        h3,h4 {
+            margin-bottom: 15px;
+        }
+
+        article {
+            padding: 10px;
+            /* width: 300px; */
+        }
+
+        &#esportes {
+            p {
+                text-align: justify;
+            }
             background: #666;
+        }
+
+        &#economia {
+            .container{
+                flex-wrap: wrap;
+            }
+            article {
+                width: 300px;
+            }
         }
     }
 }
