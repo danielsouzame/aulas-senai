@@ -38,3 +38,10 @@ const usuarios = [
     temAnimalEstimacao: false,
   },
 ];
+
+function usuariosMaiores(array){
+  array.forEach(usuarios => {
+    if(key.idade > 18){
+    }
+  });
+}

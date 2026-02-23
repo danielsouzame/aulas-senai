@@ -3,14 +3,19 @@
 
 const numeros = [18, 7, 15, 19, 53, 12, 40, 30, 34, 66];
 
-function fizzBuzz(){
-    for (let n of numeros)
+function fizzBuzz(array){
+    for (let n of array)
         if(n % 3 === 0 && n % 5 === 0){
-            const pos = numeros.indexOf(n)
-            numeros.splice(pos, 1, "FizzBuzz");
+            const pos = array.indexOf(n)
+            array.splice(pos, 1, "FizzBuzz");
+        }else if(n % 3 === 0){
+            const pos = array.indexOf(n)
+            array.splice(pos, 1, "Fizz");
+        }else if(n % 5 === 0){
+            const pos = array.indexOf(n)
+            array.splice(pos, 1, "Buzz");
         }
-      
-        console.log(numeros);
+    return array;
 }
 
-fizzBuzz();
+console.log(fizzBuzz(numeros));
