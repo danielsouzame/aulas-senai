@@ -40,8 +40,11 @@ const usuarios = [
 ];
 
 function usuariosMaiores(array){
-  array.forEach(usuarios => {
-    if(key.idade > 18){
-    }
+  const maiores = array.filter(usuario => usuario.idade >= 18);
+
+  maiores.forEach(usuario => {
+    console.log(`${usuario.nome} ${usuario.sobrenome}, ${usuario.idade} anos`)
   });
 }
+
+usuariosMaiores(usuarios)
