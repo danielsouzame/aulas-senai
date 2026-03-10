@@ -1,13 +1,16 @@
-import './App.css'
-import Cabecalho from './componentes/Cabecalho/Cabecalho'
+import './App.css';
+import Cabecalho from './componentes/Cabecalho/Cabecalho';
+import Principal from './componentes/Principal/Principal';
+import Rodape from './componentes/Rodape/Rodape';
 
 function App() {
   return (
     <>
-      <Cabecalho />
-      <h1>Vite + React + PWA</h1>
+      <Cabecalho/>
+      <Principal/>
+      <Rodape/>
     </>
   );
 }
 
-export default App
+export default App;
