@@ -4,10 +4,12 @@
     cursor: pointer;
 }
 
-.botao-customizado__primario {
+.botao-customizado-primario {
     background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
 }
 
-.botao-customizado__secundario {
+.botao-customizado-secundario {
     background-color: var(--cor-secundaria);
+    color: var(--cor-texto-claro);
 }
