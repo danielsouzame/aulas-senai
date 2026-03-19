@@ -1,0 +1,7 @@
+.lista-produtos__item {
+    background-color: #856a6a;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
