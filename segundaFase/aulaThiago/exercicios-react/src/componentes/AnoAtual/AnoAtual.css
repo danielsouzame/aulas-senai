@@ -1,0 +1,9 @@
+.ano-atual__root{
+    display: flex;
+    justify-content: right;
+    background-color: black;
+    color: yellow;
+
+    padding: 16 px;
+
+}
