@@ -4,7 +4,7 @@ import "./DiaAtual.css";
 //"15" em uma <div> com o fundo azul, texto centralizado na cor branco.
 
 function DiaAtual(){
-    const dia = new Date().getDay()
+    const dia = new Date().getDate()
     return (
         <div className="dia-atual__root">
             {dia}

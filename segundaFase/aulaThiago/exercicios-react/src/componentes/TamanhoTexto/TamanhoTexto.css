@@ -1,0 +1,9 @@
+.tamanho-texto__root{
+    background-color: brown;
+    color: yellow;
+
+    display: flex;
+    justify-content: right;
+
+    margin: 16px;
+}

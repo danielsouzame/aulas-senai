@@ -1,0 +1,10 @@
+.nomes-ordenados__root{
+    background-color: pink;
+    color: red;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+    margin: 16px;
+}

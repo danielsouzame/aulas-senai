@@ -1,0 +1,9 @@
+.data-atual-completa__root{
+    background-color: brown;
+    color: white;
+    display: flex;
+    justify-content: center;
+
+    margin: 16px;
+
+}

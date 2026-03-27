@@ -1,0 +1,16 @@
+.verificar-idade__root{
+    display: flex;
+    justify-content: center;
+
+    margin: 16px;
+}
+
+.idade-maior {
+    background-color: green;
+    color: yellow;
+}
+
+.idade-menor {
+    background-color: red;
+    color: yellow;
+}

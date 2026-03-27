@@ -1,0 +1,10 @@
+.lista-produtos__root{
+    background-color:blueviolet;
+    color: yellow;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+    margin: 16px;
+}

@@ -1,0 +1,9 @@
+.ola-pessoa__root{
+    background-color: orange;
+    color: blue;
+
+    display: flex;
+    justify-content: center;
+
+    margin: 16px;
+}

@@ -1,0 +1,10 @@
+.numeros-pares__root{
+    background-color: blue;
+    color: yellow;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+    margin: 16px;
+}

@@ -1,6 +1,6 @@
-.hora-atual__root{
-    background-color: blue;
-    color: yellow;
+.minuto-atual__root{
+    background-color: pink;
+    color: black;
     width: 50px;
     height: 50px;
     display: flex;

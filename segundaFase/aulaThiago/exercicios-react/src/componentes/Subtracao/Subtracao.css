@@ -1,0 +1,9 @@
+.subtracao__root{
+    background-color: grey;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+
+    margin: 16px;
+}
