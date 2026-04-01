@@ -1,5 +1,6 @@
 import BotaoContador from "./componentes/BotaoContador/BotaoContador";
 import Contador from "./componentes/Contador/Contador";
+import InputsEBotoes from "./componentes/InputsEBotoes/InputsEBotoes";
 import Somar from "./componentes/Somar/Somar";
 
 function App() {
@@ -27,6 +28,12 @@ function App() {
       </span>
 
       <Somar/>
+      <hr />
+      <span>
+        teste
+      </span>
+
+      <InputsEBotoes/>
       <hr />
   </>);
 }
