@@ -1,0 +1,12 @@
+.contador__root{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.botao-contador{
+    background-color: gray;
+    color: black;
+    padding: 30px;
+}
