@@ -29,11 +29,7 @@ function App() {
 
       <Somar/>
       <hr />
-      <span>
-        teste
-      </span>
-
-      <InputsEBotoes/>
+   
       <hr />
   </>);
 }
