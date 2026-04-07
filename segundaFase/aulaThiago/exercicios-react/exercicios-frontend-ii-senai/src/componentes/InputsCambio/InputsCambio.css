@@ -1,0 +1,12 @@
+.inputs-cambio__root{
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  font-size: large;
+  font-weight: bold;
+  align-items: center;
+  
+  input {
+    max-width: 25%;
+  }
+}

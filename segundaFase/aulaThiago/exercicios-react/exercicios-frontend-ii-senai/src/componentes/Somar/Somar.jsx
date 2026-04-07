@@ -5,14 +5,14 @@ import InputsEBotoes from "../InputsEBotoes/InputsEBotoes";
 function Somar(){
     const [resultado, setResultado] = useState()
 
-    const executarCalculo = (n1, n2) => {
-        setResultado(Number(n1) + Number(n2))
-    }
+    const Soma = (n1, n2) => {
+        setResultado(Number(n1) + Number(n2));
+    };
     
     return ( 
         <InputsEBotoes 
             operacao="+"
-            executarCalculo={executarCalculo}
+            executarCalculo={Soma}
             valueButton="Somar"
             resultado={resultado}
             />

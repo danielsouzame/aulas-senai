@@ -1,0 +1,20 @@
+.calculo-imc__root{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding: 8px 0;
+
+
+  input{
+    width: 150px;
+  }
+
+  button{
+    margin: 8px 0 0 0;
+    width: 100px;
+  }
+}
+
+.result {
+  font-weight: bold;
+}

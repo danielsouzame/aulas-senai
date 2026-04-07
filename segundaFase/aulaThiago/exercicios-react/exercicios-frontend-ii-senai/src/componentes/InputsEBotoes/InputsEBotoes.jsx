@@ -7,18 +7,25 @@ function InputsEBotoes({ operacao, executarCalculo, valueButton, resultado }) {
 
     return (
         <div className="inputs-e-botoes">
-            <input type="number"
+            <input type="number" id="n1"
                 placeholder="Digite um número"
                 value={n1}
                 onChange={(event) => { setN1(event.target.value) }} />
 
             <span>{operacao}</span>
 
-            <input type="number" placeholder="Digite um número"
+            <input type="number" id="n2" placeholder="Digite um número"
                 value={n2}
                 onChange={(event) => { setN2(event.target.value) }} />
 
-            <button onClick={() => executarCalculo(n1, n2)}>{valueButton}</button>
+            <button onClick={() => {
+                executarCalculo(n1, n2);
+                {setN1(''); setN2('')}
+
+            }
+
+            }>{valueButton}</button>
+            
 
             <span>= {resultado}</span>
         </div>
