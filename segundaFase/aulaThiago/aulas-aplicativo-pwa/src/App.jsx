@@ -1,43 +1,46 @@
-// IMport de bibliotecas externas, instaladas via npm
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-// Imports de arquivos de estilos (CSS)
+// imports de bibliotecas externas, instaladas via npm
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+// imports de arquivos de estilos (CSS)
 import "./App.css";
-// Imports de componentes/paginas internas do projeto react (arquivos.jsx)
+// imports de componentes/paginas internas do projeto React (arquivos .jsx)
 import Cabecalho from "./componentes/Cabecalho/Cabecalho";
 import Rodape from "./componentes/Rodape/Rodape";
 import PaginaInicial from "./paginas/PaginaInicial/PaginaInicial";
-import ListaProdutos from './paginas/ListaProdutos/ListaProdutos';
-import ListaTarefas from './paginas/ListaTarefas/ListaTarefas';
+import ListaProdutos from "./paginas/ListaProdutos/ListaProdutos";
+import ListaTarefas from "./paginas/ListaTarefas/ListaTarefas";
+import CadastroCliente from "./paginas/CadastroCliente/CadastroCliente";
 
 const roteador = createBrowserRouter([
- {
-   path: '',
-   element: <PaginaInicial />,
- },
- {
-  path: 'lista-produtos',
-  element: <ListaProdutos />,
+  {
+    path: "",
+    element: <PaginaInicial />,
   },
- {
-  path: 'lista-tarefas',
-  element: <ListaTarefas />,
+  {
+    path: "lista-produtos",
+    element: <ListaProdutos />,
   },
- {
-  path: '*',
-  element: <h1>Página não encontrada!</h1>
- },
-
+  {
+    path: "lista-tarefas",
+    element: <ListaTarefas />,
+  },
+  {
+    path: "*",
+    element: <h3>Página não encontrada!!</h3>,
+  },
+  {
+    path: "cadastro-cliente",
+    element: <CadastroCliente/>
+  }
 ]);
 
 function App() {
-   return (
-   <>
-     <Cabecalho />
-     <RouterProvider router={roteador} />
-     <Rodape />
-   </>
- );
-
+  return (
+    <>
+      <Cabecalho />
+      <RouterProvider router={roteador} />
+      <Rodape />
+    </>
+  );
 }
 
 export default App;
