@@ -20,6 +20,10 @@ function PaginaInicial() {
       <BotaoCustomizado tipo="primario" aoClicar={() => navigate("/cadastro-cliente")}>
         Cadastro de Clientes
       </BotaoCustomizado>
+      
+      <BotaoCustomizado tipo="secundario" aoClicar={() => navigate("/lista-clientes")}>
+        Lista de Clientes
+      </BotaoCustomizado>
 
       <BotaoCustomizado aoClicar={() => navigate("/blablabla")}>Rota Inválida</BotaoCustomizado>
     </Principal>

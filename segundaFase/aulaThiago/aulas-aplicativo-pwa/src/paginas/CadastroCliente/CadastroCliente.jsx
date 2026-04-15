@@ -1,13 +1,17 @@
+import { useState } from "react";
+import { toast } from 'react-toastify';
+import { formatarComMascara, MASCARA_CPF, NUMERO_TELEFONE } from "../../utils/formatarComMascar";
+import { validarCPF } from "../../utils/validarCPF";
 import "./CadastroCliente.css";
 import Principal from "../../componentes/Principal/Principal";
 import CampoCustomizado from "../../componentes/CampoCustomizado/CampoCustomizado"
 import BotaoCustomizado from "../../componentes/BotaoCustomizado/BotaoCustomizado";
-import { useState } from "react";
-import { formatarComMascara, MASCARA_CPF, NUMERO_TELEFONE } from "../../utils/formatarComMascar";
-import { validarCPF } from "../../utils/validarCPF";
 import validarEmail from "../../utils/validarEmail";
+import { useNavigate } from "react-router-dom";
 
 function CadastroCliente() {
+    const navigate = useNavigate();
+
     const [cliente, setCliente] = useState({
         nome: "",
         cpf: "",
@@ -17,7 +21,30 @@ function CadastroCliente() {
     })
 
     const salvar = () => {
-        console.log("cliente salvo:", cliente)
+        if(!cliente.nome?.trim() || !cliente.cpf?.trim()){
+            toast.error("Nome e CPF são obrigatorios.");
+            return;
+        }
+
+        if(!validarCPF(cliente.cpf)){
+            toast.error("CPF inválido!");
+            return;
+        }
+
+        if(!cliente.email?.trim() && !validarEmail(cliente.email)){
+            toast.error("Email inválido!");
+            return;
+        }
+
+        const clienteDoLocalStorage = JSON.parse(localStorage.getItem("clientes")) || [];
+
+        const novoCliente = {id: crypto.randomUUID(),...cliente}
+        clienteDoLocalStorage.push(novoCliente);
+        localStorage.setItem("clientes", JSON.stringify(clienteDoLocalStorage));
+
+        toast.success("cliente salvo com sucesso!!");
+        navigate("/lista-clientes");
+        
     }
 
     return (
@@ -33,7 +60,7 @@ function CadastroCliente() {
                 onChange={(e) => setCliente({ ...cliente, cpf: formatarComMascara(e.target.value, MASCARA_CPF) })}
                 onBlur={(e) => {
                     if (e.target.value.trim() && !validarCPF(e.target.value)) {
-                        alert('CPF inválido!')
+                        toast.error("Preencha os campos obrigatórios!");
                     }
                 }}
             />
@@ -57,7 +84,7 @@ function CadastroCliente() {
                 onChange={(e) => setCliente({ ...cliente, email: e.target.value })}
                 onBlur={(e) => {
                     if (e.target.value.trim() && !validarEmail(e.target.value)) {
-                        alert('E-mail inválido!')
+                        toast.error("Preencha os campos obrigatórios!");
                     }
                 }}
             />
