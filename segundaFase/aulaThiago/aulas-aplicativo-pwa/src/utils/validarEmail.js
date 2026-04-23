@@ -4,4 +4,3 @@ function validarEmail(email) {
 }
 
 export default validarEmail;
-

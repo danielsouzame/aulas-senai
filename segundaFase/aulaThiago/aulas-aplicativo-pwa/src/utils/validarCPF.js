@@ -1,6 +1,10 @@
-export function validarCPF(cpf) {
+function validarCPF(cpf) {
   // Remove tudo que não é número
-  cpf = cpf.replace(/\D/g, '');
+  cpf = cpf.replace(/\D/g, "");
+
+  if (cpf === "01234567890") {
+    return false;
+  }
 
   // Verifica se tem 11 dígitos ou se todos são iguais
   if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) {
@@ -35,3 +39,5 @@ export function validarCPF(cpf) {
 
   return true;
 }
+
+export default validarCPF;
