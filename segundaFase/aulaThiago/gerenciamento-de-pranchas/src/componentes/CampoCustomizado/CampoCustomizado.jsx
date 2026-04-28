@@ -1,8 +1,8 @@
 import "./CampoCustomizado.css";
 
-function CampoCustomizado({ label, obrigatorio, opcoes, ...props }) {
+function CampoCustomizado({ label,placeholder, obrigatorio, opcoes, ...props }) {
   return (
-    <div className="campo-customizado__root">
+    <div className="campo-customizado__root" >
       <span>
         {label} {obrigatorio && <span className="campo-customizado__obrigatorio">*</span>}
       </span>
@@ -12,7 +12,7 @@ function CampoCustomizado({ label, obrigatorio, opcoes, ...props }) {
       {opcoes && (
         <select className="campo-customizado__input" {...props}>
           <option key="" value="">
-            Selecione...
+            {placeholder}
           </option>
           {opcoes.map((opcao) => (
             <option key={opcao.valor} value={opcao.valor}>
